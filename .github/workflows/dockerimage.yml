@@ -13,6 +13,6 @@ jobs:
     - name: Publish to Docker Repository
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: gdoumen/react-native:${GITHUB_REF##*/}
+        name: gdoumen/react-native
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
