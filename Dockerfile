@@ -1,14 +1,14 @@
 FROM gdoumen/android:28
 
+ENV NODE_VERSION 10.x
+
 # Install base software packages
 RUN apt-get update 
-
 
 # ——————————
 # Install Node and global packages
 # ——————————
-ENV NODE_VERSION 10.x
-RUN curl -sL https://deb.nodesource.com/setup_10.x 
+RUN curl -sL https://deb.nodesource.com/setup_${NODE_VERSION} | bash -
 RUN apt-get install -y nodejs
 
 # ——————————
